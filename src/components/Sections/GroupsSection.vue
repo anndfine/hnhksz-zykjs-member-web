@@ -137,7 +137,7 @@
                     </div>
                 </div>
 
-                <!-- 电子技术组 -->
+                <!-- 融媒体小组 -->
                 <div class="col-lg-6">
                     <div class="card border-0 shadow-sm h-100 group-card">
                         <div class="card-body p-4">
@@ -146,17 +146,17 @@
                                     class="group-icon bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center me-3">
                                     <i class="bi bi-lightning-charge"></i>
                                 </div>
-                                <h4 class="fw-bold mb-0">电子技术组</h4>
+                                <h4 class="fw-bold mb-0">融媒体小组</h4>
                             </div>
                             <p class="text-muted mb-3">
-                                电子技术组学习电路设计、焊接技术和电子制作。
-                                从基础电路到复杂系统，探索电子世界的无限可能。
+                                融媒体小组学习新媒体运营、视频拍摄和内容创作。
+                                从创意策划到作品产出，探索媒体传播的无限可能。
                             </p>
                             <div class="group-features">
-                                <span class="badge bg-light text-dark me-2 mb-2">电路设计</span>
-                                <span class="badge bg-light text-dark me-2 mb-2">焊接技术</span>
-                                <span class="badge bg-light text-dark me-2 mb-2">电子制作</span>
-                                <span class="badge bg-light text-dark me-2 mb-2">故障排查</span>
+                                <span class="badge bg-light text-dark me-2 mb-2">新媒体运营</span>
+                                <span class="badge bg-light text-dark me-2 mb-2">视频拍摄</span>
+                                <span class="badge bg-light text-dark me-2 mb-2">内容创作</span>
+                                <span class="badge bg-light text-dark me-2 mb-2">文案策划</span>
                             </div>
                         </div>
                     </div>

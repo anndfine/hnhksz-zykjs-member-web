@@ -1,14 +1,145 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+// import { createApp } from 'vue'
+// import { createPinia } from 'pinia'
 
-import App from './App.vue'
-import router from './router'
-
-
-const app = createApp(App)
-
-app.use(createPinia())
-app.use(router)
+// import App from './App.vue'
+// import router from './router'
 
 
-app.mount('#app')
+// const app = createApp(App)
+
+// app.use(createPinia())
+// app.use(router)
+
+
+// app.mount('#app')
+
+
+
+
+
+async function initapp() {
+    try {
+
+        const loadCSS = (url: string): Promise<void> => {
+            return new Promise((resolve, reject) => {
+                // 检查是否已经加载过
+                if (document.querySelector(`link[href="${url}"]`)) {
+                    resolve()
+                    return
+                }
+
+                const link = document.createElement('link')
+                link.rel = 'stylesheet'
+                link.href = url
+                link.onload = () => resolve()
+                link.onerror = () => reject(new Error(`Failed to load CSS: ${url}`))
+
+                document.head.appendChild(link)
+            })
+        }
+        const loadScript = (url: string): Promise<void> => {
+            return new Promise((resolve, reject) => {
+                if (document.querySelector(`script[src="${url}"]`)) {
+                    resolve()
+                    return
+                }
+
+                const script = document.createElement('script')
+                script.src = url
+                script.type = 'text/javascript'
+                script.onload = () => resolve()
+                script.onerror = () => reject(new Error(`Failed to load script: ${url}`))
+
+                document.head.appendChild(script)
+            })
+        }
+        const waitForPageChange = (): Promise<void> => {
+            return new Promise((resolve) => {
+                const observer = new MutationObserver((mutations) => {
+                    // 检测到任何变化就停止观察并解析
+                    observer.disconnect()
+                    resolve()
+                })
+
+                // 观察整个文档的变化
+                observer.observe(document.body, {
+                    childList: true,          // 子节点的变化
+                    subtree: true,            // 所有后代节点
+                    attributes: false,        // 不观察属性变化
+                    characterData: false      // 不观察文本内容变化
+                })
+
+                // 设置超时，确保不会无限等待
+                setTimeout(() => {
+                    observer.disconnect()
+                    resolve()
+                }, 10000) // 10秒超时
+            })
+        }
+        function preloadBootstrapIcons() {
+            const icon = document.createElement('i')
+            icon.className = 'bi bi-alarm'
+            icon.style.cssText = 'opacity:0; position:absolute; left:-9999px;'
+            document.body.appendChild(icon)
+
+            // 下一帧删除
+            requestAnimationFrame(() => {
+                icon.remove()
+            })
+        }
+
+
+        const { setLoadingTitle, removeLoadingContainer } = await import("@/utils/after-app-mounted-dom");
+        setLoadingTitle("Downloading Vue Core...")
+        const { createApp } = await import('vue')
+
+        setLoadingTitle("Downloading BootStrap ...")
+
+        await loadCSS('https://static-cf4-cf6.yt437700.top/resources/bootstrap/5.3.3-dist/css/bootstrap.min.css')
+        await loadScript("https://static-cf4-cf6.yt437700.top/resources/bootstrap/5.3.3-dist/js/bootstrap.bundle.min.js")
+
+
+        setLoadingTitle("Downloading BootStrap Icons ...")
+        await loadCSS("https://static-cf4-cf6.yt437700.top/resources/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css")
+        preloadBootstrapIcons()
+
+
+        setLoadingTitle("Loading Application Dependencies...")
+        const { createPinia } = await import('pinia')
+        const { default: App } = await import('./App.vue')
+        const { default: router } = await import('./router')
+
+
+        await loadScript("https://static-cf4-cf6.yt437700.top/resources/plyr/release_latest/plyr.min.js")
+        await loadCSS("https://static-cf4-cf6.yt437700.top/resources/plyr/release_latest/plyr.min.css")
+        setLoadingTitle("Initializing Application...")
+        await new Promise(resolve => setTimeout(resolve, 100))
+
+        const app = createApp(App)
+        app.use(createPinia())
+        app.use(router)
+
+
+        setLoadingTitle("Rendering Application...")
+        app.mount('#app')
+        waitForPageChange().then(() => {
+            // removeLoadingContainer();
+            waitForPageChange().then(() => {
+
+                removeLoadingContainer();
+
+            })
+        })
+    }
+    catch (e) {
+        try {
+            const { setAppLoadingError } = await import("@/utils/after-app-mounted-dom");
+            setAppLoadingError(e)
+        }
+        catch {
+            // 忽略错误处理中的错误
+        }
+    }
+}
+
+initapp()
