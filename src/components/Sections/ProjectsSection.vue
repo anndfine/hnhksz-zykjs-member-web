@@ -4,9 +4,9 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col-lg-8 mx-auto text-center">
-          <h2 class="display-4 fw-bold mb-3">项目展示</h2>
+          <h2 class="display-4 fw-bold mb-3">可公开项目展示</h2>
           <p class="lead text-muted">
-            科技社成员们开发的各种创新项目，展现我们的技术实力和创造力。
+            科技社成员们的亲手“搞事情”的成果，每一个都是创造力的结晶 ~
           </p>
         </div>
       </div>

@@ -34,7 +34,7 @@ import type { CSSProperties } from 'vue'
 // 背景图片URL - 在此处修改图片URL
 // 示例: const backgroundImageUrl = ref('https://example.com/image.jpg')
 // 留空则使用默认渐变背景
-import backgroundImage from '@/assets/images/7ae9935b-ea9f-432a-bed3-987d4270708b.jpg'
+import backgroundImage from '@/assets/images/a5b2b67c-83d1-4862-a27b-1560a0797e8e.jpg'
 const backgroundImageUrl = ref(backgroundImage)
 //ref('https://cn1.anndfine.top/downloadfiles/fTzCjwUhkpw')
 // 图片加载状态

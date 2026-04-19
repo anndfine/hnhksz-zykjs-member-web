@@ -5,7 +5,7 @@
       <div class="row g-4">
         <div class="col-lg-4">
           <div class="footer-about">
-            <a class="text-decoration-none text-light" href="/">
+            <a class="text-decoration-none text-light" href="http://xn--fiqz2lfvc7sgf8apzee6louxrhy7ib64gsxt.theflashstar.com/">
               <h5 class="fw-bold mb-3">
                 <i class="bi bi-cpu-fill me-2"></i>
                 海口市第四中学展翼科技社
@@ -26,8 +26,8 @@
             <h6 class="fw-bold mb-3">快速链接</h6>
             <div class="d-flex flex-column gap-2">
               <a href="https://yt437700.top" class="text-decoration-none text-light">yt437700</a>
-              <a href="/live" class="text-decoration-none text-light">对外直播</a>
-              <a href="/member/" class="text-decoration-none text-light">成员登录入口</a>
+              <a href="https://xn--fiqz2lcku9fl3jr9inwal49dphy7iby7r7zfx4d.theflashstar.com/live" class="text-decoration-none text-light">对外直播</a>
+              <a href="https://海口四中展翼科技社成员系统.theflashstar.com/" class="text-decoration-none text-light">成员登录入口</a>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@
 
             </div>
             <div class="text-secondary small">
-              <div>Copyright &copy; 2025 海口市第四中学展翼科技社</div>
+              <div>Copyright &copy; 2026 海口市第四中学展翼科技社</div>
               <div>All Rights Reserved</div>
             </div>
           </div>
