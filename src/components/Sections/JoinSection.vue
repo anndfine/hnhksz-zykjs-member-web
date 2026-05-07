@@ -38,116 +38,93 @@
             </ul>
           </div>
         </div>
-
         <div class="col-lg-6">
-          <div class="join-form bg-white rounded-4 p-4 text-dark">
-            <h4 class="fw-bold mb-4 text-center">立即报名</h4>
-            <form>
-              <div class="row g-3">
+          <div class="join-slogan text-center">
+            <!-- 简洁版招新口号 -->
+            <div class="slogan-card bg-white rounded-4 p-5 mb-4 shadow-sm">
+              <h3 class="fw-bold text-dark mb-3">加入四中科技社</h3>
+              <div class="lead text-muted">
+                从土地到屏幕，从代码到文创，总有一款适合你！
+              </div>
+            </div>
+            
+            <!-- 分组版招新口号 -->
+            <div class="slogan-card bg-white rounded-4 p-4 mb-4 shadow-sm">
+              <h5 class="fw-bold text-dark mb-3">七重身份，一个社团！</h5>
+              <div class="row g-2 text-start">
                 <div class="col-md-6">
-                  <label for="name" class="form-label">姓名</label>
-                  <input type="text" class="form-control" id="name" placeholder="请输入姓名">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-cpu text-primary me-2"></i>
+                    <small class="text-muted">科创组搞发明</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-robot text-success me-2"></i>
+                    <small class="text-muted">机器人组玩电路</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-airplane text-info me-2"></i>
+                    <small class="text-muted">航模组飞上天</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-flower1 text-warning me-2"></i>
+                    <small class="text-muted">青芽营养花草</small>
+                  </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="class" class="form-label">班级</label>
-                  <input type="text" class="form-control" id="class" placeholder="例如：高一(1)班">
-                </div>
-                <div class="col-12">
-                  <label for="contact" class="form-label">联系方式</label>
-                  <input type="text" class="form-control" id="contact" placeholder="QQ/微信/电话">
-                </div>
-                <div class="col-12">
-                  <label for="interest" class="form-label">感兴趣的方向</label>
-                  <select class="form-select" id="interest">
-                    <option selected>请选择感兴趣的方向</option>
-                    <option value="programming">编程开发</option>
-                    <option value="robot">机器人制作</option>
-                    <option value="3d">3D打印与建模</option>
-                    <option value="electronics">电子制作</option>
-                    <option value="other">其他</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <label for="experience" class="form-label">相关经验（选填）</label>
-                  <textarea class="form-control" id="experience" rows="3" placeholder="请简要描述你的相关经验或技能"></textarea>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary w-100 py-2 fw-bold disabled" disabled>
-                    <i class="bi bi-send me-2"></i>提交申请<small class="text-danger">(网站报名渠道暂不可用)</small>
-                  </button>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-brush text-danger me-2"></i>
+                    <small class="text-muted">文创工坊做香囊</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-cpu-fill text-secondary me-2"></i>
+                    <small class="text-muted">AI组训模型</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-camera text-dark me-2"></i>
+                    <small class="text-muted">融媒体组拍大片</small>
+                  </div>
                 </div>
               </div>
-            </form>
-            <hr>
-            <div class="mt-4 text-center">
-              <p class="text-muted small mb-2">或通过以下方式联系我们</p>
-              <div class="d-flex justify-content-center gap-3">
-                <a href="#" class="text-decoration-none">
-                  <div class="d-flex align-items-center text-primary">
-                    <i class="bi bi-qq me-2"></i>
-                    <span>QQ群</span>
-                  </div>
-                </a>
-                <a href="#" class="text-decoration-none">
-                  <div class="d-flex align-items-center text-success">
-                    <i class="bi bi-wechat me-2"></i>
-                    <span>微信</span>
-                  </div>
-                </a>
-              </div>
+            </div>
+            
+            <div class="contact-info bg-white rounded-4 p-4 shadow-sm">
+              <p class="text-muted small mb-0">
+                每个学期初，科技社都会组织招新活动，欢迎对科技感兴趣的同学们踊跃报名！
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 招新时间表 -->
+      <!-- 文艺版招新口号 -->
       <div class="row mt-5 pt-5">
         <div class="col-12">
-          <div class="bg-white rounded-4 p-4 text-dark">
-            <h4 class="fw-bold mb-4 text-center">流程安排</h4>
-            <div class="row text-center">
-              <div class="col-md-3 mb-3">
-                <div class="timeline-item">
-                  <div
-                    class="timeline-badge bg-success text-white rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center"
-                    style="width: 60px; height: 60px;">
-                    <i class="bi bi-calendar-check fs-5"></i>
-                  </div>
-                  <h6 class="fw-bold">报名阶段</h6>
-                  <p class="text-muted small">在校期间</p>
+          <div class="bg-white rounded-4 p-5 text-dark text-center shadow-sm">
+            <h3 class="fw-bold mb-3">与世界温柔交手</h3>
+            <p class="lead text-muted mb-4">
+              种一株香草，做一个香囊，写一段代码，拍一部短片。<br>
+              在四中科技社，与世界温柔交手。
+            </p>
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="feature-item">
+                  <i class="bi bi-tree text-success display-6 mb-3"></i>
+                  <h5 class="fw-bold">从土地到生活</h5>
+                  <p class="text-muted small">青芽营的生态种植，让科技与自然和谐共生</p>
                 </div>
               </div>
-              <div class="col-md-3 mb-3">
-                <div class="timeline-item">
-                  <div
-                    class="timeline-badge bg-warning text-white rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center"
-                    style="width: 60px; height: 60px;">
-                    <i class="bi bi-people fs-5"></i>
-                  </div>
-                  <h6 class="fw-bold">面试选拔</h6>
-                  <p class="text-muted small">报名后第二周</p>
+              <div class="col-md-4">
+                <div class="feature-item">
+                  <i class="bi bi-gear text-primary display-6 mb-3"></i>
+                  <h5 class="fw-bold">从传统到智能</h5>
+                  <p class="text-muted small">文创工坊的数字制造，让传统工艺焕发新生</p>
                 </div>
               </div>
-              <div class="col-md-3 mb-3">
-                <div class="timeline-item">
-                  <div
-                    class="timeline-badge bg-primary text-white rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center"
-                    style="width: 60px; height: 60px;">
-                    <i class="bi bi-flag fs-5"></i>
-                  </div>
-                  <h6 class="fw-bold">正式入社</h6>
-                  <p class="text-muted small">选报后一周内</p>
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <div class="timeline-item">
-                  <div
-                    class="timeline-badge bg-info text-white rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center"
-                    style="width: 60px; height: 60px;">
-                    <i class="bi bi-mortarboard fs-5"></i>
-                  </div>
-                  <h6 class="fw-bold">新生培训</h6>
-                  <p class="text-muted small">入社后</p>
+              <div class="col-md-4">
+                <div class="feature-item">
+                  <i class="bi bi-lightbulb text-warning display-6 mb-3"></i>
+                  <h5 class="fw-bold">从创意到现实</h5>
+                  <p class="text-muted small">科创组的项目实践，让创意落地成真</p>
                 </div>
               </div>
             </div>
@@ -163,32 +140,32 @@
 </script>
 
 <style scoped>
-.join-form {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
 .benefit-item {
   font-size: 1.1rem;
 }
 
-.timeline-item {
+.slogan-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slogan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+}
+
+.feature-item {
   transition: transform 0.3s ease;
 }
 
-.timeline-item:hover {
-  transform: translateY(-5px);
+.feature-item:hover {
+  transform: translateY(-3px);
 }
 
-.form-control,
-.form-select {
-  border-radius: 10px;
-  border: 2px solid #e9ecef;
+.contact-info {
   transition: all 0.3s ease;
 }
 
-.form-control:focus,
-.form-select:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 0.2rem rgba(30, 60, 114, 0.25);
+.contact-info:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
 }
 </style>
