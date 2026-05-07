@@ -57,7 +57,7 @@
                   <i class="bi bi-bootstrap me-1"></i> Bootstrap
                 </span>
               </div>
-              <a href="https://github.com/anndfine/hnhksz-kjs" class="text-white nav-link"><i
+              <a href="https://github.com/anndfine/hnhksz-zykjs-member-web" class="text-white nav-link"><i
                   class="bi bi-github">&nbsp;</i>Bug反馈 | 提供建议 | 贡献代码</a>
               <a href="/help/" class="text-white nav-link">
                 <i class="bi bi-book">&nbsp;</i>新手入门指南
