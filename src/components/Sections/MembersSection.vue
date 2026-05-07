@@ -91,12 +91,67 @@
           </div>
         </div>
       </div>
+
+      <!-- 成员活动照片墙 -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="text-center mb-4">
+            <h3 class="fw-bold mb-3">活动精彩瞬间</h3>
+            <p class="text-muted">记录科技社成员们的成长与精彩时刻</p>
+          </div>
+          
+          <!-- 按类别展示照片 -->
+          <div v-for="category in photoCategories" :key="category" class="mb-5">
+            <div class="d-flex align-items-center mb-3">
+              <h4 class="fw-bold mb-0 me-3">{{ category }}</h4>
+              <div class="flex-grow-1 border-bottom"></div>
+            </div>
+            
+            <div class="row g-3">
+              <div v-for="photo in photosByCategory[category]" :key="photo.id" class="col-lg-3 col-md-4 col-6">
+                <div class="photo-card">
+                  <img :src="photo.src" 
+                       :alt="photo.title" 
+                       class="img-fluid rounded shadow-sm">
+                  <div class="photo-overlay">
+                    <span class="photo-caption">{{ photo.title }}</span>
+                    <small class="photo-description d-block mt-1">{{ photo.description }}</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 照片统计 -->
+          <div class="row mt-4">
+            <div class="col-12">
+              <div class="bg-light rounded-4 p-3">
+                <div class="row text-center">
+                  <div class="col-md-4 col-6 mb-2">
+                    <div class="h4 fw-bold text-primary">{{ photos.length }}</div>
+                    <div class="text-muted small">精彩照片</div>
+                  </div>
+                  <div class="col-md-4 col-6 mb-2">
+                    <div class="h4 fw-bold text-success">{{ photoCategories.length }}</div>
+                    <div class="text-muted small">活动类别</div>
+                  </div>
+                  <div class="col-md-4 col-6 mb-2">
+                    <div class="h4 fw-bold text-info">{{ uniqueTagsCount }}</div>
+                    <div class="text-muted small">特色标签</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { photos, photosByCategory, photoCategories } from '@/data/photos'
 
 // 简化的成员数据接口 - 只有name是必须的，其他都是可选的
 interface Member {
@@ -286,6 +341,12 @@ const handleAvatarError = (event: Event) => {
   img.style.display = 'none'
   // 默认的bi bi-person-fill图标会显示在img下层
 }
+
+// 照片统计
+const uniqueTagsCount = computed(() => {
+  const allTags = photos.flatMap(photo => photo.tags)
+  return new Set(allTags).size
+})
 </script>
 
 <style scoped>
@@ -325,5 +386,41 @@ const handleAvatarError = (event: Event) => {
 .member-avatar img[src=""],
 .member-avatar img[style*="display: none"] {
   display: none;
+}
+
+.photo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  padding: 20px 10px 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover .photo-overlay {
+  transform: translateY(0);
+}
+
+.photo-caption {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  display: block;
+}
+
+.photo-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.75rem;
+  text-align: center;
 }
 </style>
