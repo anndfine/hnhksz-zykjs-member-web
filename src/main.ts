@@ -95,12 +95,12 @@ async function initapp() {
 
         setLoadingTitle("Downloading BootStrap ...")
 
-        await loadCSS('https://static-cf4-cf6.yt437700.top/resources/bootstrap/5.3.3-dist/css/bootstrap.min.css')
-        await loadScript("https://static-cf4-cf6.yt437700.top/resources/bootstrap/5.3.3-dist/js/bootstrap.bundle.min.js")
+        await loadCSS('https://staticfile1.mstafyja.top/resources/bootstrap/5.3.3-dist/css/bootstrap.min.css')
+        await loadScript("https://staticfile1.mstafyja.top/resources/bootstrap/5.3.3-dist/js/bootstrap.bundle.min.js")
 
 
         setLoadingTitle("Downloading BootStrap Icons ...")
-        await loadCSS("https://static-cf4-cf6.yt437700.top/resources/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css")
+        await loadCSS("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css")
         preloadBootstrapIcons()
 
 
@@ -110,8 +110,8 @@ async function initapp() {
         const { default: router } = await import('./router')
 
 
-        await loadScript("https://static-cf4-cf6.yt437700.top/resources/plyr/release_latest/plyr.min.js")
-        await loadCSS("https://static-cf4-cf6.yt437700.top/resources/plyr/release_latest/plyr.min.css")
+        // await loadScript("https://static-cf4-cf6.yt437700.top/resources/plyr/release_latest/plyr.min.js")
+        // await loadCSS("https://static-cf4-cf6.yt437700.top/resources/plyr/release_latest/plyr.min.css")
         setLoadingTitle("Initializing Application...")
         await new Promise(resolve => setTimeout(resolve, 100))
 
